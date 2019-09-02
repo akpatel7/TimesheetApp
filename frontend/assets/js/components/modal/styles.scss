@@ -1,0 +1,482 @@
+@import '~scss/variables';
+@import '~scss/animation';
+
+
+.modal {
+    position: fixed;
+    width: auto;
+    min-width: 475px;
+    top: 20%;
+    top: 10vh;
+    left: calc(50% - 11em);
+
+    padding: 2em;
+
+    background: $primary-color;
+
+    box-shadow: $dialog-boxshadow;
+    overflow: hidden;
+
+    z-index: 4;
+
+    .input {
+        color: $item-font-color;
+    }
+    .label {
+        color: $item-font-color;
+    }
+
+    h2, h3, p {
+        margin: 0 0 16px;
+        color: $item-font-color;
+    }
+
+    button {
+        color: $item-font-color;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover,
+    .btn:hover,
+    .btn-link:hover {
+        color: $highlight-color;
+        transition: 0.15s;
+    }
+}
+
+
+.modal .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 18px 24px;
+    color: $item-font-color;
+}
+
+
+.modal {
+    .options {
+        width: 40em;
+        input {
+            margin-top: 1.0em;
+            font-size: 1.25em;
+        }
+
+        label {
+            font-family: $highlight-font;
+            font-weight: 700;
+            font-size: 1.25em;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin: 1.5em 0 0;
+            padding: 1em 0;
+            font-family: $highlight-font;
+            font-weight: 700;
+            text-align: left;
+
+            i {
+                padding-right: 10px;
+            }
+        }
+    }
+
+    .action {
+        button {
+            display: inline-block;
+            width: inherit;
+            margin: 0;
+            padding-bottom: 0;
+        }
+
+        .cancel {
+            float: left;
+            font-style: normal;
+        }
+
+        .delete {
+            float: right;
+        }
+    }
+}
+
+
+/* ---- Submit ---- */
+
+.modal .submit {
+    padding: 12px 18px;
+    color: $item-font-color;
+    text-transform: uppercase;
+
+    background: $highlight-color;
+    border-radius: 4px;
+
+    transition: 0.3s;
+
+    &.disabled {
+        background: rgba(5, 5, 5, 0.25);
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    i {
+        margin-left: 8px;
+    }
+}
+
+.modal {
+    .search {
+        margin-top: 1.5em;
+        width: 40em;
+        color: $item-font-color;
+
+        .list {
+            max-height: 37em;
+        }
+    }
+
+    .save {
+        width: 40em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        transition: 0.3s;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+        input {
+            width: calc(100% - 1em);
+            line-height: 1.2em;
+            color: $item-font-color;
+        }
+
+        #save_submit {
+            padding-top: 5px;
+            color: $highlight-color;
+            cursor: pointer;
+        }
+
+        #save_submit:hover {
+            opacity: 0.85;
+        }
+    }
+
+    .done {
+        margin: 2em auto 0;
+        float: right;
+        font-family: $highlight-font;
+        font-weight: 700;
+        font-size: 1.25em;
+        transition: 0.15s;
+        text-transform: uppercase;
+    }
+
+    .done:hover {
+        color: $highlight-color;
+    }
+
+    .blockInput {
+        padding: 1em 0;
+
+        label {
+            color: $item-font-color;
+        }
+
+        input {
+            border-bottom: 1px solid $border-color;
+            color: $item-font-color;
+            width: 100%;
+        }
+    }
+
+    .inlineInput {
+        padding: 1em 0;
+
+        label {
+            color: $item-font-color;
+            padding: 0 0.5em 0 0;
+            width: 5em;
+        }
+
+        input {
+            border-bottom: 1px solid $border-color;
+            color: $item-font-color;
+            width: 100%;
+        }
+    }
+    &_large {
+        left: calc(50% - 15em);
+        .search, .options {
+            width: 48em;
+
+        }
+    }
+
+    .versions, .users-list {
+        width: 125px;
+        float: left;
+        margin-bottom: 15px;
+    }
+
+    .commit-info, .user-info {
+        color: white;
+        float: left;
+        margin-left: 15px;
+        max-width: 490px;
+    }
+
+    .edit-dependency {
+        .button__changeVersion {
+            text-align: right;
+        }
+    }
+    .modal__assign-user {
+        .button__assign-user {
+            text-align: right;
+        }
+    }
+}
+
+
+.modal {
+    .uniqueCheck {
+        position: absolute;
+        margin-top: 5em;
+        right: 2em;
+        display: block;
+        font-family: $highlight-font;
+        font-weight: 700;
+        color: #FFF;
+
+        i {
+            padding: 5px;
+            margin-right: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        span {
+            padding-bottom: 10px;
+            vertical-align: middle;
+        }
+    }
+
+    animation: slideInLeft 1000ms linear both;
+}
+
+
+// React Animation.
+.modal-enter {
+    animation: slideInLeft 1000ms linear both;
+}
+
+.modal-leave {
+    animation: slideOutLeft 1000ms linear both;
+}
+
+
+.modal__add__edit__promoted__tags__categories,
+.modal__add__edit__tags,
+.modal__add_user {
+    h3 {
+        text-align: center;
+    }
+
+    .more {
+        float: right;
+        i {
+            margin: 0;
+        }
+    }
+
+    .fields__header {
+        margin-bottom: .5em;
+        padding-bottom: .5em;
+
+        button {
+            float: right;
+
+            i {
+                padding-right: .5em;
+            }
+        }
+    }
+
+    .fields {
+        width: 100%;
+        height: 9em;
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        overflow-y: auto;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        .field {
+            display: flex;
+            padding-top: 1em;
+            label {
+                width: 50%;
+            }
+            input {
+                width: 50%;
+                margin-right: 1em;
+                flex-grow: 1;
+
+            }
+
+            button {
+                flex-basis: auto;
+                position: relative;
+                width: 1.5em;
+                height: 1.5em;
+
+                &:hover {
+                    color: $highlight-color;
+                }
+            }
+        }
+    }
+
+    .icons {
+        height: 12em;
+
+        ul {
+            height: 8em;
+        }
+    }
+
+    .blockInput {
+        width: 400px;
+        transition: 1s;
+        justify-content: space-between;
+        color: #fff;
+
+        label, input {
+            display: inline-block;
+        }
+
+        input:valid {
+            border-bottom: 1px solid $white;
+            transition: border-color 1s;
+        }
+
+        input:focus {
+            border-bottom: 1px solid $highlight-color;
+            transition: 0.1s;
+        }
+
+        input:invalid {
+            border-bottom: 1px solid red;
+            transition: border-color 1s;
+        }
+
+        textarea {
+            height: 6em;
+            width: 100%;
+            padding: .25em;
+            color: #FFF;
+            background-color: rgba(255, 255, 255, 0.1);
+            resize: none;
+            overflow-y: auto;
+        }
+
+        textarea[name=name] {
+            height: 4.5em;
+            &:invalid {
+                border: 1px solid red;
+                transition: border-color 1s;
+            }
+
+            &:valid {
+                border: 1px solid rgba(255, 255, 255, 0.25);
+                transition: border-color 1s;
+            }
+        }
+
+        ul {
+            padding-left: 0;
+            color: #fff;
+            overflow-y: auto;
+        }
+
+        .description__header, .name__header {
+            padding-bottom: .5em;
+        }
+
+        .icons__label {
+            width: auto;
+        }
+
+        .icons__selector {
+            width: 100%;
+        }
+    }
+
+    .submit__modal {
+        text-align: center;
+        height: 1.5em;
+        margin: 12px auto;
+        padding: 12px;
+        font-family: $highlight-font;
+        font-weight: 700;
+        i {
+            padding-left: .5em;
+        }
+        span {
+            padding-right: .5em;
+        }
+    }
+
+    .linkTo {
+        display: inline-block;
+        a {
+            font-family: $primary-font;
+            color: #fff;
+
+            &:hover {
+                color: $highlight-color;
+            }
+
+            i {
+                padding-right: .5em;
+            }
+        }
+
+        .leftSubmit {
+            display: inline-block;
+            width: 300px;
+        }
+    }
+}
+
+
+/* ---- Form hints ---- */
+.modal {
+    .modal__hint_warning {
+        color: $orange;
+        max-width: 400px;
+        text-align: center;
+        font-weight: $highlight-weight;
+    }
+
+    .modal__hint {
+        color: rgba(255, 255, 255, 0.75);
+    }
+}
+
+
+/* ---- Footer navigation ---- */
+.modal {
+    .modal__footer-nav {
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        margin-top: 16px;
+        padding: 12px 0;
+
+        .btn-link {
+            padding: 0 12px 0 0;
+            font-weight: $highlight-weight;
+        }
+    }
+}

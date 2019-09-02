@@ -1,0 +1,177 @@
+@import '~scss/variables';
+@import '~scss/animation';
+
+
+#timesheets {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    min-width: $min-width;
+
+    .options {
+        display: flex;
+
+        button {
+            color: $font-color;
+            width: 250px;
+            font-size: 24px;
+            font-weight: $highlight-weight;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            color: $highlight-color;
+        }
+
+        button.active {
+            color: $green;
+        }
+    }
+
+    input {
+        color: $font-color;
+        margin: 12px;
+    }
+
+    label {
+        font-weight: $highlight-weight;
+    }
+}
+
+
+#timesheets .new-timesheet {
+    text-align: center;
+    background: $sheet-background;
+    min-width: $min-width;
+
+    .header {
+        background: $green;
+    }
+
+    margin-bottom: 24px;
+}
+
+#timesheets .list {
+    min-width: $min-width;
+    overflow: auto;
+    box-shadow: 0 0 25px 0 rgba(5, 5, 5, 0.25);
+    background: $sheet-background;
+
+    .header {
+        background: $blue;
+    }
+}
+
+#timesheets .timesheet-item {
+    margin-bottom: 12px;
+    padding: 12px;
+    background: $sheet-background;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    &.add .header {
+        background: $green;
+    }
+
+    &.selected {
+        animation: expandVertically 1000ms linear both;
+        border: 2px solid $border-color;
+    }
+}
+
+
+/* ----- Timesheet ---- */
+#timesheets .timesheet {
+    position: absolute;
+    min-width: $min-width;
+
+    margin-bottom: 12px;
+
+    background: $sheet-background;
+    box-shadow: 0 0 25px 0 rgb(21, 21, 21);
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    animation: expandVertically 1000ms linear both;
+
+    .open-new-entry {
+        &:hover {
+            background: $highlight-color;
+            color: #FFF;
+            box-shadow: 0 0 5px 0 $highlight-color;
+
+            transition: 0.1s;
+        }
+    }
+
+    .new-entry {
+        padding: 12px;
+        border: 1px solid $border-color;
+        animation: expandVertically 1000ms linear both;
+
+        .header {
+            background: $green;
+        }
+    }
+}
+
+
+/* ----- Entries ---- */
+#timesheets .entries {
+    border: 1px solid $border-color;
+
+    .labels {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 12px;
+
+        font-weight: $highlight-weight;
+        text-align: center;
+    }
+
+    .number {
+        width: 10%;
+    }
+
+    .duration {
+        width: 25%;
+    }
+
+    .task {
+        width: 65%;
+    }
+
+    .summary {
+        border-top: 2px solid $border-color;
+        padding: 8px 12px;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+#timesheets .entry {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    padding: 0 12px;
+    border-bottom: 1px solid $border-color;
+
+    .value {
+        text-align: center;
+    }
+
+    .value:not(:last-child) {
+        border-right: 1px solid $border-color;
+    }
+
+    .number {
+        text-align: left;
+        font-weight: $highlight-weight;
+        i { margin-right: 8px; }
+    }
+}

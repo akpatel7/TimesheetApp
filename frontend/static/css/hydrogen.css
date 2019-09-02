@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'Nexa-Light';
+  src: url("../fonts/Nexa/Nexa-Light.otf"); }
+
+@font-face {
+  font-family: 'Nexa-Bold';
+  src: url("../fonts/Nexa/Nexa-Bold.otf"); }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0; }
+
+body {
+  font-family: 'Nexa-Light', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #1c1c1c;
+  background: #EBEBEB; }
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+  font-family: "Nexa-Bold"; }
+
+a {
+  outline-style: none;
+  border-style: none;
+  text-decoration: none;
+  font-family: "Nexa-Bold";
+  cursor: pointer;
+  color: #1c1c1c;
+  transition: 0.3s; }
+
+p {
+  line-height: 1.75em; }
+
+strong {
+  font-weight: normal;
+  font-family: "Nexa-Bold"; }
+
+em {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Nexa-Light"; }
+
+input, textarea, button {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  font-size: 1em;
+  font-family: 'Nexa-Light', 'Helvetica', Arial, sans-serif;
+  color: #1c1c1c;
+  border: none;
+  background: none; }
+
+/* ---- Placeholder ---- */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(255, 255, 255, 0.2); }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.2); }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(255, 255, 255, 0.2); }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.2); }
+
+/* ---- Highlight ---- */
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.1);
+  color: #09c4fc; }
+
+::selection {
+  background: rgba(255, 255, 255, 0.1);
+  color: #09c4fc; }
+
+::-webkit-selection {
+  background: rgba(255, 255, 255, 0.1);
+  color: #09c4fc; }
+
+/* Disable focus highlight */
+textarea:focus, input:focus, button:focus {
+  outline: none; }
+
+/* ---- Scrollbars ---- */
+::-webkit-scrollbar {
+  width: 4px; }
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05); }
+
+::-webkit-scrollbar-thumb {
+  background: rgba(9, 196, 252, 0.5); }
+
+#root, #container {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+
+.content.modal {
+  position: fixed;
+  background: rgba(28, 28, 28, 0.9); }
+
+.table-outer {
+  display: table;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%; }
+
+.table-inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+
+#server_feedback {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0.5em 0;
+  font-family: "Nexa-Bold";
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: lowercase;
+  color: #FFF;
+  background: #09c4fc;
+  box-shadow: 0px 20px 20px 0px rgba(5, 5, 5, 0.2);
+  z-index: 3;
+  pointer-events: none; }
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer; }
+
+.hidden {
+  display: none; }
+
+/* ---- Login/Logout ---- */
+#login {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 300px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #FFF;
+  background: #1c1c1c;
+  border: solid 3px rgba(255, 255, 255, 0.25); }
+  #login img {
+    height: 2em;
+    margin-top: 1em; }
+  #login label {
+    display: block;
+    padding: 1em 0 0;
+    font-family: "Nexa-Light";
+    text-transform: lowercase; }
+  #login input, #login textarea {
+    color: #FFF;
+    width: 100%;
+    display: block; }
+  #login input[type='text'], #login input[type='password'], #login input[type='email'], #login input[type='number'] {
+    height: 1.5em;
+    text-align: center;
+    background: rgba(5, 5, 5, 0.5);
+    line-height: 1.5em; }
+  #login input[type='radio'] {
+    display: none; }
+  #login textarea {
+    height: 4em;
+    background: rgba(5, 5, 5, 0.5); }
+  #login input[type='button'], #login input[type='submit'] {
+    margin-top: 1em;
+    padding: 0.5em 0;
+    text-transform: lowercase;
+    font-family: "Nexa-Bold";
+    cursor: pointer; }
+  #login span {
+    display: none; }
+  #login .errorlist {
+    display: none; }
+
+.modal {
+  box-shadow: 0px 0px 30px 5px rgba(5, 5, 5, 0.3);
+  padding-bottom: 1em; }
+
+.window {
+  box-shadow: 0px 0px 30px 5px rgba(5, 5, 5, 0.3); }

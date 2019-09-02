@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+{% if webpack %}
+    {% load render_bundle from webpack_loader %}
+{% endif %}
+    <div id='root'></div>
+
+    <script>
+        var modules = [
+            {% for module in modules %}
+                '{{ module }}',
+            {% endfor %}
+        ];
+
+        {% if account %}
+            var account = {{ account|safe }};
+        {% else %}
+            var account = null;
+        {% endif %}
+    </script>
+
+    {% if webpack %}
+        {% render_bundle 'main' %}
+    {% else %}
+        <script src="{% static 'dist/main.js' %}"></script>
+        <link href="{% static 'dist/main.0.style.css' %}" rel="stylesheet" media="screen">
+    {% endif %}
+{% endblock %}

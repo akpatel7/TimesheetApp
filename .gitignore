@@ -1,0 +1,61 @@
+# Hydrogen setup (unique to each machine.)
+source/setup.py
+
+# Slave setup
+slave/settings.py
+
+# Electron app setup
+electron/setup.js
+
+# Cache
+*pyc
+*DS_Store
+*swn
+*swp
+.ropeproject
+
+# Node
+node_modules
+source/yarn.lock
+
+# Yarn lock file
+source/yarn.lock
+
+# Webpack
+source/webpack-stats-dev.json
+source/local_config.js
+
+# DB
+db.sqlite3
+db.sqlite3-journal
+
+# Media
+source/hydrogen/media/*
+
+# Log files
+source/hydrogen.log
+
+# Scratchpad file.
+source/test.py
+source/scratch.js
+
+# Webpack production files
+source/frontend/static/dist
+
+# Functional tests
+source/functional_tests/test_data/fail_data_dump
+
+# source/functional_tests/setup.py
+builds/
+npm-debug.log
+
+# Include the temp & uploaded folders, but not anything within.
+source/temp/*
+source/uploaded/*
+
+# Database Migrations
+source/database/migrations/*
+source/task_manager/migrations/*
+
+# Test deploy
+source/simple_deploy.sh

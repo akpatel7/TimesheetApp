@@ -1,0 +1,163 @@
+@import 'animation';
+@import 'variables';
+
+
+* {
+    box-sizing: border-box;
+    /* causes the tasks to not show up on task manager... */
+    /*backface-visibility: hidden;*/ /*without this flickering occurs on elements with animations*/
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: $primary-font;
+    font-size: 16px;
+    color: $primary-color;
+}
+
+h1, h2, h3, h4 {
+    font-family: $highlight-font;
+    font-weight: 700;
+}
+
+a {
+    outline-style: none;
+    border-style: none;
+    text-decoration: none;
+    font-family: $highlight-font;
+    font-weight: 700;
+    cursor: pointer;
+    color: $primary-color;
+    transition: $transition-off;
+}
+
+p {
+    line-height: 1.75em;
+}
+
+strong {
+    font-weight: normal;
+    font-family: $highlight-font;
+    font-weight: 700;
+}
+
+em {
+    font-weight: normal;
+    font-style: normal;
+    font-family: $primary-font;
+}
+
+input, textarea, button {
+    margin: 0;
+    padding: 0;
+
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+
+    font-size: 1em;
+    font-family: $primary-font;
+    color: $primary-color;
+
+    border: none;
+    background: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ---- Placeholder ---- */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $placeholder;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $placeholder;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $placeholder;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $placeholder;
+}
+
+
+/* ---- Highlight ---- */
+::-moz-selection {
+    background:rgba(255, 255, 255, 0.1);
+    color: $highlight-color;
+}
+
+::selection {
+    background:rgba(255, 255, 255, 0.1);
+    color: $highlight-color;
+}
+
+::-webkit-selection {
+    background:rgba(255, 255, 255, 0.1);
+    color: $highlight-color;
+}
+
+/* Disable focus highlight */
+textarea:focus, input:focus, button:focus{
+    outline: none;
+}
+
+
+/* ---- Scrollbars ---- */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(9, 196, 252, 0.5);
+}
+
+
+#root, #container {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.radio-container {
+    cursor: pointer;
+}
+
+.content.modal {
+    position: fixed;
+    background: $overlay;
+}
+
+.tableOuter {
+    display: table;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.tableInner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+button.disabled, #panel button.disabled {
+    color: $btn-disabled-text;
+}

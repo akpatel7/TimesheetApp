@@ -1,0 +1,82 @@
+//icon width and height
+$item-icon-width: 400px;
+$item-icon-height: 800px;
+
+// Mobile size
+$min-width: 375px;
+
+// Fonts
+$primary-font: 'Quicksand', sans-serif;
+$highlight-font: $primary-font;
+$primary-weight: 400;
+$highlight-weight: 700;
+
+$noContent-list-font-color: rgb(180, 180, 180);
+$noContent-grid-font-color: rgb(60, 60, 60);
+$noContent-panel-font-color: rgba(255, 255, 255, 0.5);
+
+// Colors
+$add-color: rgba(63, 173, 96, 0.8);
+$sheet-background: #FFF;
+$font-color: rgb(21, 21, 21);
+$no-content-color: rgba(21, 21, 21, 0.25);
+$border-color: rgba(5, 5, 5, 0.25);
+$highlight-color: rgb(9, 196, 252);
+
+$overlay: rgba(21, 21, 21, 0.85);
+$placeholder: rgba(5, 5, 5, 0.5);
+$primary-color: rgb(28, 28, 28);
+$server-boxshadow: 0px 20px 20px 0px rgba(5, 5, 5, 0.2);
+$text-highlight-background-color: rgba(255, 255, 255, 0.1);
+
+$red: rgb(242, 38, 19);
+$orange: rgb(226, 130, 51);
+$yellow: rgb(226, 199, 61);
+$green: rgb(63, 173, 96);
+$blue: rgb(88, 153, 203);
+$purple: rgb(208, 89, 181);
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$transparent: rgba(255, 255, 255, 0.0);
+$gray: rgb(98, 98, 98);
+$ice-color: rgb(165, 242, 243);
+
+// Transition
+$transition-on: 0.05s;
+$transition-off: 0.3s;
+
+// Modal windows *Now based on Material Design*
+// slight difference: the second box-shadow is the ambient light, I consider half radius to be ambient
+// alpha is .10 + the y
+// card was copied from: https://codepen.io/sdthornton/pen/wBZdXq
+$dialog-boxshadow: 0px 24px 48px rgba(0, 0, 0, 0.34), 0px 0px 24px rgba(0, 0, 0, 0.24);
+$right-drawer-boxshadow: 0px 16px 32px rgba(0, 0, 0, 0.26), 0px 0px 16px rgba(0, 0, 0, 0.24);
+$elevated-card-boxshadow: 0px 14px 28px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.22);
+$card-boxshadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+$pressed-button-boxshadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+$toggle-boxshadow: 0px 1px 2px rgba(0, 0, 0, 0.10), 0px 1px 1px rgba(0, 0, 0, 0.26);
+
+// Tables
+$table-cell-padding: 10px;
+$line-height-base: normal;
+$table-border-color: $primary-color;
+
+/* ---- Project layout ---- */
+// Side menu
+$side-menu-width: 22em;
+$side-menu-color: rgb(28, 28, 28);
+
+// Top Menu
+$top-menu-height: 4em;
+
+// Buttons
+$btn-text: $white;
+$btn-disabled-text: #5d5d5d;
+$btn-font: $highlight-font;
+// Button inversed style;
+$btn-inversed-text: $primary-color;;
+$btn-inversed-background: $white;
+// Button primary style;
+$btn-primary-background: $primary-color;
+$btn-primary-disabled-background: #303030;
+$btn-primary-active-background: $highlight-color;
