@@ -12,6 +12,7 @@
     "moment": "^2.15.1",
     "moment-range": "^3.0.3",
     "npm": "^5.4.2",
+    "package.json": "^2.0.1",
     "react": "^16.0.0",
     "react-document-title": "^2.0.2",
     "react-dom": "^16.0.0",
@@ -72,7 +73,7 @@
   "scripts": {
     "test": "NODE_PATH=frontend/assets/js mocha --compilers js:babel-core/register --require frontend/test/init.js frontend/test/**/*.test.js* frontend/test/**/**/*.test.js*",
     "start": "node server.js",
-    "build": "webpack --config webpack.prod.config.js --progress",
+    "build": "webpack --config webpack.dev.config.js --progress",
     "watch": "node server.js",
     "webserver": "python manage.py runserver 0.0.0.0:8000"
   },
