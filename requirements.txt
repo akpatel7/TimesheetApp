@@ -16,11 +16,11 @@ graphene-django==1.2.1
 graphql-core==1.0.1
 graphql-relay==0.4.5
 Jinja2==2.8
-lxml==4.4.1
-psycopg2==2.8.3
+lxml==3.4.4
+psycopg2==2.6.1
 pycrypto==2.6.1
 Pillow==2.9.0
 redis==2.10.5
 requests==2.7.0
 selenium==3.3.1
-Twisted==19.7.0
+Twisted==16.6.0

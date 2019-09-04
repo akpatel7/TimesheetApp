@@ -1,1 +1,1 @@
-{"status":"done","publicPath":"http://172.18.10.145:3000/assets/bundles/","chunks":{"main":[{"name":"main.js","publicPath":"http://172.18.10.145:3000/assets/bundles/main.js","path":"C:\\Dev\\Timesheet\\frontend\\static\\dist\\main.js"}]}}
+{"status":"done","publicPath":"http://127.0.0.1:3000/assets/bundles/","chunks":{"main":[{"name":"main.js","publicPath":"http://127.0.0.1:3000/assets/bundles/main.js","path":"C:\\Dev\\Timesheet\\frontend\\static\\dist\\main.js"}]}}

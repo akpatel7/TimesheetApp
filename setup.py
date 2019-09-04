@@ -16,8 +16,8 @@ LOG_VERBOSE = True
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,
-        'BUNDLE_DIR_NAME': 'frontend/assets/bundles/',     # must end with slash
-        'STATS_FILE': os.path.join(BASE_DIR, 'Timesheets/webpack-stats-dev.json'),
+        'BUNDLE_DIR_NAME': 'frontend\\assets\\bundles\\',     # must end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, 'Timesheet\\webpack-stats-dev.json'),
         'POLL_INTERVAL': 0.1,
         'IGNORE': ['.+\.hot-update.js', '.+\.map']
     }
@@ -25,10 +25,10 @@ WEBPACK_LOADER = {
 
 # Production Webpack setup.
 if not DEBUG:
-    print 'PRODUCTION MODE'
+    print('PRODUCTION MODE')
     WEBPACK_LOADER.update({
         'DEFAULT': {
-            'BUNDLE_DIR_NAME': 'frontend/static/dist/',
-            'STATS_FILE': os.path.join(BASE_DIR, 'Timesheets/webpack-stats-prod.json'),
+            'BUNDLE_DIR_NAME': 'frontend\\static\\dist\\',
+            'STATS_FILE': os.path.join(BASE_DIR, 'Timesheet\\webpack-stats-prod.json'),
         }
     })

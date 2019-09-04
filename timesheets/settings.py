@@ -10,7 +10,7 @@ ALLOWED_HOSTS = ['*']
 
 
 # Static file directories.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = 'C:\\Dev\\Timesheet'
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -25,7 +25,7 @@ INSTALLED_APPS = (
     'webpack_loader',
     'rest_framework',
     'database',
-    'rest',
+    'rest'
 )
 
 if DEBUG:
@@ -115,8 +115,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
 
     # CORS headers
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
+    #'corsheaders.middleware.CorsMiddleware',
+    #'django.middleware.common.CommonMiddleware',
 
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
@@ -173,7 +173,7 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'frontend/static'))
+STATIC_ROOT = 'C:\\Dev\\Timesheet\\frontend\\static'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.abspath(os.path.dirname(__file__)) + '/media/'
+MEDIA_ROOT = 'C:\\Dev\\Timesheet\\frontend\\media'
