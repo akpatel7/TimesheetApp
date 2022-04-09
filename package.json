@@ -9,7 +9,7 @@
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.2.1",
     "lodash": "^4.15.0",
-    "moment": "^2.15.1",
+    "moment": "^2.29.2",
     "moment-range": "^3.0.3",
     "npm": "^5.4.2",
     "package.json": "^2.0.1",
